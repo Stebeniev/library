@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon/icon.png" type="image/x-icon">
+    <link rel="icon" href="favicon/icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <title>Library</title>
+</head>
+
+<body>
+<div class="body-wrapper">
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="header-title">Brooklyn Public Library</h1>
+                <button class="header__burger-btn" id="burger">
+                    <span></span><span></span><span></span>
+                </button>
+                <nav class="menu__b" id="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link" href="#about">About</a>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#favorites">Favorites</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#coffee-shop">Coffee shop</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#our-contacts">Contacts</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#digital-library-cards">Library Card</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header-logo">
+                    <img src="logo/icon_profile.svg" alt="icon_profile" id="user-icon" class="logo">
+                </div>
+                <div class="popup__login" id="popup">
+                    <div class="popup__body">
+                        <div class="profile-inactive" id="inactive">
+                            <p class="profile-text">Profile</p>
+                            <img src="./logo/Line-4.svg" alt="line-4" class="line__4">
+                            <a href="#main" class="profile-content" target="_blank" id="open-login">Log In</a>
+                            <a href="#main" class="profile-content" target="_blank" id="open-register">Register</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-active__icon" id="main-active__icon">
+                    <div class="active-icon" onclick="togglePopUp()">
+                        <p class="name"></p>
+                    </div>
+                    <div class="popup__active" id="popup-active">
+                        <div class="popup__body">
+                            <div class="profile-active" id="active">
+                                <p class="profile-text__active">Profile</p>
+                                <img src="./logo/Line-4.svg" alt="line-4" class="line__4">
+                                <a href="#main" class="profile-content" target="_blank" id="my-profile">My profile</a>
+                                <a href="#" class="profile-content" target="_blank" id="log-out">Log Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="names-container"></div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="main" id="main">
+                <!--login form-->
+                <form class="login-form" id="login-form" action="">
+                    <div class="login-window" id="login">
+                        <div class="login__body">
+                            <div class="login">
+                                <div class="user-login">
+                                    <div>
+                                        <p class="login-title">Login</p>
+                                    </div>
+                                    <div>
+                                        <img src="./logo/close.svg" alt="close" class="close-window" id="close-login">
+                                    </div>
+                                </div>
+                                <p class="login-title__email">E-mail or readers card</p>
+                                <label>
+                                    <input class="login-input" type="email" id="login-email" name="email" required>
+                                </label>
+                                <p class="login-title__password">Password</p>
+                                <label>
+                                    <input class="login-input" type="password" id="login-password" name="password"
+                                           minlength="8"
+                                           required>
+                                </label>
+                                <div class="login-button">
+                                    <button class="login-btn__login" id="login-button" type="submit">Log In</button>
+                                </div>
+                                <div class="login-info">
+                                    <p class="login-info__content">Don’t have an account?</p>
+                                    <a href="#" class="login-info__offer" target="_blank" id="to-register">Register</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <!--register form-->
+                <form class="register-form" id="register-form" action="">
+                    <div class="register-window" id="register">
+                        <div class="register__body">
+                            <div class="register">
+                                <div class="user-register">
+                                    <div>
+                                        <p class="register-title">Register</p>
+                                    </div>
+                                    <div>
+                                        <img src="./logo/close.svg" alt="close" class="close-window"
+                                             id="close-register">
+                                    </div>
+                                </div>
+                                <p class="register-title__name">First name</p>
+                                <label>
+                                    <input id="first-name" class="login-input" type="text" name="first-name" required>
+                                </label>
+                                <p class="register-title__last_name">Last name</p>
+                                <label>
+                                    <input id="last-name" class="login-input" type="text" name="last-name" required>
+                                </label>
+                                <p class="register-title__email">E-mail</p>
+                                <label>
+                                    <input id="email" class="login-input" type="email" name="email" required>
+                                </label>
+                                <p class="register-title__password">Password</p>
+                                <label>
+                                    <input id="password" class="login-input" type="password" name="password"
+                                           minlength="8"
+                                           required>
+                                </label>
+                                <div class="register-button">
+                                    <button id="register-user" class="register-btn__login" type="submit">Sign Up
+                                    </button>
+                                </div>
+                                <div class="register-info">
+                                    <p class="register-info__content">Already have an account?</p>
+                                    <a href="" class="register-info__offer" target="_blank" id="add-login">Login</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="main-section">
+                    <h3>Welcome
+                        <br>
+                        to the Brooklyn
+                        <br>
+                        Library</h3>
+                </div>
+            </section>
+
+            <section class="about" id="about">
+                <h2 class="content-title__about">About</h2>
+                <div class="content-logo">
+                    <img src="logo/line.svg" alt="first-line">
+                </div>
+                <div class="paragraph-about">
+                    <p>The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop
+                        inside</p>
+                </div>
+                <button class="slider__btn-prev"><img class="carret" src="image/Carret_Left.svg" alt="Carret">
+                </button>
+                <div class="slider">
+                    <div class="slider-line">
+                        <img class="photo" src="image/woman.png" alt="woman">
+                        <img class="photo" src="image/bust.png" alt="bust">
+                        <img class="photo" src="image/library.png" alt="library">
+                        <img class="photo-1" src="image/ladder.png" alt="bust">
+                        <img class="photo-2" src="image/building.png" alt="library">
+                    </div>
+                </div>
+                <button class="slider__btn-next"><img class="carret" src="image/Carret_Right.svg" alt="Carret">
+                </button>
+                <div class="slider__wrapper">
+                    <div class="slider__dot active-dot"></div>
+                    <div class="slider__dot"></div>
+                    <div class="slider__dot"></div>
+                    <div class="slider__dot" hidden id="dot-visible1"></div>
+                    <div class="slider__dot" hidden id="dot-visible"></div>
+                </div>
+            </section>
+
+            <section class="favorites" id="favorites">
+                <h2 class="content-title">Favorites</h2>
+                <div class="content-logo">
+                    <img src="logo/line.svg" alt="first-line">
+                </div>
+                <!--               Library card-->
+
+                <div class="input-wrapper">
+                    <p>Pick favorites of season</p>
+                    <div class="radiobutton">
+                        <input class="radio" id="r_winter" type="radio" name="season" value="Winter" checked>
+                        <label for="r_winter" class="label">Winter</label>
+                        <input class="radio" id="r_spring" type="radio" name="season" value="Spring">
+                        <label for="r_spring" class="label">Spring</label>
+                        <input class="radio" id="r_summer" type="radio" name="season" value="Summer">
+                        <label for="r_summer" class="label">Summer</label>
+                        <input class="radio" id="r_autumn" type="radio" name="season" value="Autumn">
+                        <label for="r_autumn" class="label">Autumn</label>
+                    </div>
+                </div>
+                <div class="content-wrapper">
+                    <div class="choice__winter">
+                        <div class="library-choice__winter">
+                            <div class="book-container">
+                                <div class="book">
+                                    <div class="book-title">
+                                        <h4>Staff Picks</h4>
+                                    </div>
+                                    <div class="book-content">
+                                        <span>The Book Eaters</span>
+                                        <br>
+                                        By Sunyi Dean
+                                    </div>
+                                    <div class="book-paragraph">
+                                        <p class="book-text">An unusual sci-fi story about a book eater woman who tries
+                                            desperately
+                                            to save her dangerous mind-eater son from tradition and certain death.
+                                            Complete with
+                                            dysfunctional family values, light Sapphic romance, and a strong, complex
+                                            protagonist.
+                                            Not for the faint of heart.</p>
+                                    </div>
+                                    <img class="book__img" src="image/book-1.png" alt="book-1">
+                                    <div class="book-button" id="123">
+                                        <button class="book-btn" type="button">Buy</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="book-container">
+                                <div class="book">
+                                    <div class="book-title">
+                                        <h4>Staff Picks</h4>
+                                    </div>
+                                    <div class="book-content">
+                                        <span>Cackle</span>
+                                        <br>
+                                        By Rachel Harrison
+                                    </div>
+                                    <div class="book-paragraph">
+                                        <p class="book-text">Are your Halloween movies of choice The Witches of Eastwick
+                                            and
+                                            Practical Magic? Look no further than here - where a woman recovering from a
+                                            breakup
+                                            moves to a quaint town in upstate New York and befriends a beautiful
+                                            witch.</p>
+                                    </div>
+                                    <div class="book-button">
+                                        <button class="book-btn" type="button">Buy</button>
+                                    </div>
+                                    <img class="book__img" src="image/book-2.png" alt="book-2">
+                                </div>
+                            </div>
+                            <div class="book-container">
+                                <div class="book">
+                                    <div class="book-title">
+                                        <h4>Staff Picks</h4>
+                                    </div>
+                                    <div class="book-content">
+                                        <span>Dante: Poet of the Secular World</span>
+                                        <br>
+                                        By Erich Auerbach
+                                    </div>
+                                    <div class="book-paragraph">
+                                        <p class="book-text">Auerbach's engaging book places the 'Comedy' within the
+                                            tradition
+                                            of epic, tragedy, and philosophy in general, arguing for Dante's uniqueness
+                                            as one
+                                            who
+                                            raised the individual and his drama of soul into something of divine
+                                            significance—an
+                                            inspired introduction to Dante's main themes.</p>
+                                    </div>
+                                    <div class="book-button">
+                                        <button class="book-btn">Buy</button>
+                                    </div>
+                                </div>
+                                <img class="book__img" src="image/book-3.png" alt="book-3">
+                            </div>
+                            <div class="book-container">
+                                <div class="book">
+                                    <div class="book-title">
+                                        <h4>Staff Picks</h4>
+                                    </div>
+                                    <div class="book-content">
+                                        <span>The Last Queen</span>
+                                        <br>
+                                        By Clive Irving
+                                    </div>
+                                    <div class="book-paragraph">
+                                        <p class="book-text">A timely and revelatory new biography of Queen Elizabeth
+                                            (and her
+                                            family) exploring how the Windsors have evolved and thrived as the modern
+                                            world has
+                                            changed around them.</p>
+                                    </div>
+                                    <div class="book-button">
+                                        <button class="book-btn">Buy</button>
+                                    </div>
+                                    <img class="book__img" src="image/book-4.png" alt="book-4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="choice__spring">
+                        <div class="library-choice__spring">
+                            <div class="book-container">
+                                <div class="book">
+                                    <div class="book-title">
+                                        <h4>Staff Picks</h4>
+                                    </div>
+                                    <div class="book-content">
+                                        <span>The Body</span>
+                                        <br>
+                                        By Stephen King
+                                    </div>
+                                    <div class="book-paragraph">
+                                        <p class="book-text">Powerful novel that takes you back to a nostalgic time,
+                                            exploring
+                                            both the beauty and danger and loss of innocence that is youth.</p>
+                                    </div>
+                                    <div class="book-button">
+                                        <button class="book-btn">Buy</button>
+                                    </div>
+                                </div>
+                                <img class="book__img" src="image/book-5.png" alt="book-5">
+                            </div>
+                            <div class="book-container">
+                                <div class="book">
+                                    <div class="book-title">
+                                        <h4>Staff Picks</h4>
+                                    </div>
+                                    <div class="book-content">
+                                        <span>Carry: A Memoir of Survival on Stolen Land</span>
+                                        <br>
+                                        By Toni Jenson
+                                    </div>
+                                    <div class="book-paragraph">
+                                        <p class="book-text">This memoir about the author's relationship with gun
+                                            violence
+                                            feels
+                                            both expansive and intimate, resulting in a lyrical indictment of the way
+                                            things
+                                            are.</p>
+                                    </div>
+                                    <div class="book-button">
+                                        <button class="book-btn">Buy</button>
+                                    </div>
+                                </div>
+                                <img class="book__img" src="image/book-6.png" alt="book-6">
+                            </div>
+                            <div class="book-container">
+                                <div class="book">
+                                    <div class="book-title">
+                                        <h4>Staff Picks</h4>
+                                    </div>
+                                    <div class="book-content">
+                                        <span>Days of Distraction</span>
+                                        <br>
+                                        By Alexandra Chang
+                                    </div>
+                                    <div class="book-paragraph">
+                                        <p class="book-text">A sardonic view of Silicon Valley culture, a meditation on
+                                            race,
+                                            and a journal of displacement and belonging, all in one form-defying package
+                                            of
+                                            spare prose.</p>
+                                    </div>
+                                    <div class="book-button">
+                                        <button class="book-btn">Buy</button>
+                                    </div>
+                                </div>
+                                <img class="book__img" src="image/book-7.png" alt="book-7">
+                            </div>
+                            <div class="book-container">
+                                <div class="book">
+                                    <div class="book-title">
+                                        <h4>Staff Picks</h4>
+                                    </div>
+                                    <div class="book-content">
+                                        <span>Dominicana</span>
+                                        <br>
+                                        By Angie Cruz
+                                    </div>
+                                    <div class="book-paragraph">
+                                        <p class="book-text">A fascinating story of a teenage girl who marries a man
+                                            twice
+                                            her
+                                            age with the promise to bring her to America. Her marriage is an opportunity
+                                            for
+                                            her family to eventually immigrate. For fans of Isabel Allende and Julia
+                                            Alvarez.</p>
+                                    </div>
+                                    <div class="book-button">
+                                        <button class="book-btn">Buy</button>
+                                    </div>
+                                </div>
+                                <img class="book__img" src="image/book-8.png" alt="book-8">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="choice__summer">
+                        <div class="library-choice__summer">
+                            <div class="book-container">
+                                <div class="book">
+                                    <div class="book-title">
+                                        <h4>Staff Picks</h4>
+                                    </div>
+                                    <div class="book-content">
+                                        <span>Crude: A Memoir By Pablo Fajardo & Sophie Tardy-Joubert</span>
+                                        <br>
+                                        By Pablo Fajardo & Sophie Tardy-Joubert
+                                    </div>
+                                    <div class="book-paragraph">
+                                        <p class="book-text">Drawing and color by Damien Roudeau | This book illustrates
+                                            the
+                                            struggles of a group of indigenous Ecuadoreans as they try to sue the
+                                            ChevronTexaco
+                                            company for damage their oil fields did to the Amazon and her people</p>
+                                    </div>
+                                    <div class="book-button">
+                                        <button class="book-btn">Buy</button>
+                                    </div>
+                                </div>
+                                <img class="book__img" src="image/book-9.png" alt="book-9">
+                            </div>
+                            <div class="book-container">
+                                <div class="book">
+                                    <div class="book-title">
+                                        <h4>Staff Picks</h4>
+                                    </div>
+                                    <div class="book-content">
+                                        <span>Let My People Go Surfing</span>
+                                        <br>
+                                        By Yvon Chouinard
+                                    </div>
+                                    <div class="book-paragraph">
+                                        <p class="book-text">Chouinard—climber, businessman, environmentalist—shares
+                                            tales
+                                            of
+                                            courage and persistence from his experience of founding and leading
+                                            Patagonia,
+                                            Inc.
+                                            Full title: Let My People Go Surfing: The Education of a Reluctant
+                                            Businessman,
+                                            Including 10 More Years of Business Unusual.</p>
+                                    </div>
+                                    <div class="book-button">
+                                        <button class="book-btn">Buy</button>
+                                    </div>
+                                </div>
+                                <img class="book__img" src="image/book-10.png" alt="book-9">
+                            </div>
+                            <div class="book-container">
+                                <div class="book">
+                                    <div class="book-title">
+                                        <h4>Staff Picks</h4>
+                                    </div>
+                                    <div class="book-content">
+                                        <span>The Octopus Museum: Poems</span>
+                                        <br>
+                                        By Brenda Shaughnessy
+                                    </div>
+                                    <div class="book-paragraph">
+                                        <p class="book-text">This collection of bold and scathingly beautiful feminist
+                                            poems
+                                            imagines what comes after our current age of environmental destruction,
+                                            racism,
+                                            sexism,
+                                            and divisive politics.</p>
+                                    </div>
+                                    <div class="book-button">
+                                        <button class="book-btn">Buy</button>
+                                    </div>
+                                </div>
+                                <img class="book__img" src="image/book-11.png" alt="book-11">
+                            </div>
+                            <div class="book-container">
+                                <div class="book">
+                                    <div class="book-title">
+                                        <h4>Staff Picks</h4>
+                                    </div>
+                                    <div class="book-content">
+                                        <span>Shark Dialogues: A Novel</span>
+                                        <br>
+                                        By Kiana Davenport
+                                    </div>
+                                    <div class="book-paragraph">
+                                        <p class="book-text">An epic saga of seven generations of one family encompasses
+                                            the
+                                            tumultuous history of Hawaii as a Hawaiian woman gathers her four
+                                            granddaughters
+                                            together in an erotic tale of villains and dreamers, queens and
+                                            revolutionaries,
+                                            lepers and healers.</p>
+                                    </div>
+                                    <div class="book-button">
+                                        <button class="book-btn">Buy</button>
+                                    </div>
+                                </div>
+                                <img class="book__img" src="image/book-12.png" alt="book-12">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="choice__autumn">
+                        <div class="library-choice__autumn">
+                            <div class="book-container">
+                                <div class="book">
+                                    <div class="book-title">
+                                        <h4>Staff Picks</h4>
+                                    </div>
+                                    <div class="book-content">
+                                        <span>Casual Conversation By Renia White</span>
+                                        <br>
+                                        By Renia White
+                                    </div>
+                                    <div class="book-paragraph">
+                                        <p class="book-text">White's impressive debut collection takes readers through
+                                            and
+                                            beyond the concepts of conversation and the casual - both what we say to
+                                            each
+                                            other
+                                            and what we don't, examining the possibilities around how we construct and
+                                            communicate identity.</p>
+                                    </div>
+                                    <div class="book-button">
+                                        <button class="book-btn">Buy</button>
+                                    </div>
+                                </div>
+
+                                <img class="book__img" src="image/book-13.png" alt="book-13">
+                            </div>
+                            <div class="book-container">
+                                <div class="book">
+                                    <div class="book-title">
+                                        <h4>Staff Picks</h4>
+                                    </div>
+                                    <div class="book-content">
+                                        <span>The Great Fire</span>
+                                        <br>
+                                        By Lou Ureneck
+                                    </div>
+                                    <div class="book-paragraph">
+                                        <p class="book-text">The harrowing story of an ordinary American and a
+                                            principled
+                                            Naval
+                                            officer who, horrified by the burning of Smyrna, led an extraordinary rescue
+                                            effort
+                                            that saved a quarter of a million refugees from the Armenian Genocide</p>
+                                    </div>
+                                    <div class="book-button">
+                                        <button class="book-btn">Buy</button>
+                                    </div>
+                                </div>
+                                <img class="book__img" src="image/book-14.png" alt="book-14">
+                            </div>
+                            <div class="book-container">
+                                <div class="book">
+                                    <div class="book-title">
+                                        <h4>Staff Picks</h4>
+                                    </div>
+                                    <div class="book-content">
+                                        <span>Rickey: The Life and Legend</span>
+                                        <br>
+                                        By Howard Bryant
+                                    </div>
+                                    <div class="book-paragraph">
+                                        <p class="book-text">With the fall rolling around, one can't help but think of
+                                            baseball's
+                                            postseason coming up! And what better way to prepare for it than reading the
+                                            biography
+                                            of one of the game's all-time greatest performers, the Man of Steal,
+                                            Rickey Henderson?</p>
+                                    </div>
+                                    <div class="book-button">
+                                        <button class="book-btn">Buy</button>
+                                    </div>
+                                </div>
+
+                                <img class="book__img" src="image/book-15.png" alt="book-15">
+                            </div>
+                            <div class="book-container">
+                                <div class="book">
+                                    <div class="book-title">
+                                        <h4>Staff Picks</h4>
+                                    </div>
+                                    <div class="book-content">
+                                        <span>Slug: And Other Stories</span>
+                                        <br>
+                                        By Megan Milks
+                                    </div>
+                                    <div class="book-paragraph">
+                                        <p class="book-text">Exes Tegan and Sara find themselves chained together by
+                                            hairballs
+                                            of
+                                            codependency. A father and child experience the shared trauma of giving
+                                            birth to
+                                            gods
+                                            from their wounds.</p>
+                                    </div>
+                                    <div class="book-button">
+                                        <button class="book-btn">Buy</button>
+                                    </div>
+                                </div>
+                                <img class="book__img" src="image/book-16.png" alt="book-16">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+
+            <section class="coffee-shop" id="coffee-shop">
+                <h2 class="content-title__shop">Coffee shop</h2>
+                <div class="content-logo">
+                    <img src="logo/line.svg" alt="first-line">
+                </div>
+                <div class="paragraph-shop">
+                    <p>In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and
+                        friendly conversation. You can get a favorite book and read in coffee shop. Our barista to cook
+                        you
+                        best coffee, and also you can try desserts from bakery.</p>
+                </div>
+                <div class="menu">
+                    <div class="table">
+                        <h3>Coffee & Tea</h3>
+                        <div class="table">
+                            <table>
+                                <tr>
+                                    <td class="range">Cold Brew Coffee</td>
+                                    <td><img class="line__2" src="logo/line-2.svg" alt="line-2"></td>
+                                    <td class="range">$3</td>
+                                </tr>
+                                <tr class="table__column">
+                                    <td class="range">French Press Pot</td>
+                                    <td><img class="line__2" src="logo/line-2.svg" alt="line-2"></td>
+                                    <td class="range">$3</td>
+                                </tr>
+                                <tr class="table__column">
+                                    <td class="range">Espresso</td>
+                                    <td><img class="line__2" src="logo/line-2.svg" alt="line-2"></td>
+                                    <td class="range">$2</td>
+                                </tr>
+                                <tr class="table__column">
+                                    <td class="range">Cappuccino</td>
+                                    <td><img class="line__2" src="logo/line-2.svg" alt="line-2"></td>
+                                    <td class="range">$4</td>
+                                </tr>
+                                <tr class="table__column">
+                                    <td class="range">Hot tea</td>
+                                    <td><img class="line__2" src="logo/line-2.svg" alt="line-2"></td>
+                                    <td class="range">$2</td>
+                                </tr>
+                                <tr class="table__column">
+                                    <td class="range">Cold tea</td>
+                                    <td><img class="line__2" src="logo/line-2.svg" alt="line-2"></td>
+                                    <td class="range">$2</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="table-2">
+                        <h3>Desserts & Cakes</h3>
+                        <div class="second-table">
+                            <table>
+                                <tr>
+                                    <td class="range2">Forest Gateau</td>
+                                    <td><img class="line__2" src="logo/line-2.svg" alt="line-2"></td>
+                                    <td class="range">$16</td>
+                                </tr>
+                                <tr class="table__column">
+                                    <td class="range2">Blue Moon</td>
+                                    <td><img class="line__2" src="logo/line-2.svg" alt="line-2"></td>
+                                    <td class="range">$16</td>
+                                </tr>
+                                <tr class="table__column">
+                                    <td class="range2">Truffle Cake</td>
+                                    <td><img class="line__2" src="logo/line-2.svg" alt="line-2"></td>
+                                    <td class="range">$15</td>
+                                </tr>
+                                <tr class="table__column">
+                                    <td class="range2">Chocolate Cake</td>
+                                    <td><img class="line__2" src="logo/line-2.svg" alt="line-2"></td>
+                                    <td class="range">$18</td>
+                                </tr>
+                                <tr class="table__column">
+                                    <td class="range2">Poet’s Dream Cake</td>
+                                    <td><img class="line__2" src="logo/line-2.svg" alt="line-2"></td>
+                                    <td class="range">$16</td>
+                                </tr>
+                                <tr class="table__column">
+                                    <td class="range2">Pineapple Cake</td>
+                                    <td><img class="line__2" src="logo/line-2.svg" alt="line-2"></td>
+                                    <td class="range">$14</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="our-contacts" id="our-contacts">
+                <h2>Our Contacts</h2>
+                <div class="content-logo">
+                    <img src="logo/line.svg" alt="first-line">
+                </div>
+                <div class="our-contacts__content">
+                    <div class="our-contacts__info">
+                        <p class="our-contacts__first-text">For all Library inquiries:</p>
+                        <ul class="number-link">
+                            <li>
+                                <a href="tel:+38095317092" class="phone">Please call (617) 730-2370</a>
+                            </li>
+                            <li class="phone-list">
+                                <a href="tel:+38095317092" class="phone">
+                                    For TTY service, please call (617) 730-2370</a>
+                            </li>
+                            <li class="phone-list">
+                                <a href="tel:+38095317092" class="phone">
+                                    Putterham Library: (617) 730-2385</a>
+                            </li>
+                        </ul>
+                        <ul class="number-link">
+                            <li class="email-list">
+                                <a href="mailto:dm.stebenev@gmail.com" class="email-link">
+                                    <span>Senior Staff</span></a>
+                            </li>
+                            <li>
+                                <a href="mailto:dm.stebenev@gmail.com" class="email-link">
+                                    Library Director: <span>Amanda Hirst</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="our-contacts__map">
+                        <img src="image/map.png" alt="map">
+                    </div>
+                </div>
+            </section>
+
+            <section class="digital-library-cards" id="digital-library-cards">
+                <h2 class="content-title">Digital Library Cards</h2>
+                <div class="content-logo">
+                    <img src="logo/line.svg" alt="first-line">
+                </div>
+                <div class="find__card-active">
+                    <div class="user-active__card">
+                        <h3 class="find-card__title-active">Your Library card</h3>
+                        <div class="card-border">
+                            <div class="library-wrapper">
+                                <h3 class="library-card">Brooklyn Public Library</h3>
+                                <div class="wrapper">
+                                    <p class="fullName-user"></p>
+                                    <p class="random-user__number"></p>
+                                </div>
+                            </div>
+                            <div class="users-info">
+                                <div class="user-status_active">
+                                    <p class="visits-user">visits</p>
+                                    <p class="bonuses-user">bonuses</p>
+                                    <p class="books-user">Books</p>
+                                </div>
+                                <div class="my-profile__icon-active">
+                                    <img src="my_profile/Union.svg" alt="union" class="users-icons-active">
+                                    <img src="my_profile/Star.svg" alt="star" class="users-icons-active">
+                                    <img src="my_profile/book.svg" alt="book" class="users-icons__book-active">
+                                </div>
+                                <div class="my-profile__number-active">
+                                    <p class="user-active__numbers" id="user-active__account"></p>
+                                    <p class="user-active__numbers">1240</p>
+                                    <p class="user-active__book">2</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="get-card">
+                        <h3>Get a reader card</h3>
+                        <div class="get-card__paragraph">
+                            <p>You will be able to see a reader card after logging into account, or you can register a
+                                new
+                                account</p>
+                        </div>
+                        <div class="choice__of__actions">
+                            <div class="action">
+                                <!--                                <a href="#main" class="choice__button" type="button" id="signup">Sign Up</a>-->
+                                <button class="choice__button errorRegister" type="button">Sign Up</button>
+                                <div></div>
+                                <button class="choice__button errorLogin" type="button">Log in</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="find__card">
+                    <div class="user-passive__card">
+                        <h3 class="find-card__title">Find your Library card</h3>
+                        <div class="card-border">
+                            <div class="library-wrapper">
+                                <h3 class="library-card">Brooklyn Public Library</h3>
+                                <div class="wrapper">
+                                    <label>
+                                        <input type="text" placeholder="Reader's name">
+                                    </label>
+                                    <label>
+                                        <input type="number" placeholder="Card number">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="library__button">
+                                <button class="button__info" type="button">Check the card</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="get-card">
+                        <h3>Get a reader card</h3>
+                        <div class="get-card__paragraph">
+                            <p>You will be able to see a reader card after logging into account, or you can register a
+                                new
+                                account</p>
+                        </div>
+                        <div class="choice__of__actions">
+                            <div class="action">
+                                <!--                                                                <a href="#main" class="choice__button" type="button" id="signup">Sign Up</a>-->
+                                <button class="choice__button" type="button" id="signup">Sign Up</button>
+                                <div id="modal-anchor"></div>
+                                <button class="choice__button" type="button" id="log-in">Log in</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-address">
+                    <div class="footer-address__link">
+                        <a href="https://goo.gl/maps/ZfjRQR5Y4t9fYZVM8" target="_blank" class="google-link">286 Cadman
+                            Plaza, New York,
+                            <br>
+                            NY 11238, United States
+                        </a>
+                    </div>
+                    <ul class="footer-list">
+                        <li class="footer-item">
+                            <a href="https://twitter.com/" target="_blank"><img src="logo/twitter.svg"
+                                                                                alt="twitter"></a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="https://www.instagram.com/" target="_blank"><img src="logo/instagram.svg"
+                                                                                      alt="instagram"
+                                                                                      class="footer-logo"></a>
+                        </li>
+                        <li class="footer-item">
+                            <a href="https://www.facebook.com/" target="_blank"><img src="logo/facebook.svg"
+                                                                                     alt="facebook"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-schedule">
+                    <p>Mon - Fri
+                        <br>
+                        08:00 am - 07:00 pm
+                    </p>
+
+                    <p class="schedule">Sat - Sun
+                        <br>
+                        10:00 am - 06:00 pm
+                    </p>
+                </div>
+            </div>
+            <img src="logo/Line-3.svg" alt="line-3" class="footer-line">
+            <div class="footer-link">
+                <h4 class="year">@2023</h4>
+<!--                <a href="https://rs.school/js-stage0/" target="_blank">-->
+<!--                    <img src="logo/The-Rolling-Scopes-School.svg" alt="RSSchool" class="RSS-icon">-->
+                </a>
+                <a href="https://github.com/Stebeniev" target="_blank" class="my-github">Dmitriy</a>
+            </div>
+        </div>
+    </footer>
+</div>
+<div class="library-card__wrapper" id="library-card__wrapper">
+    <div class="library-card__window" id="library-card__window">
+        <div class="library-card__header">
+            <div class="library-card__content">
+                <p class="library-card__title">Buy a library card</p>
+                <img src="./logo/close_btn.svg" alt="close" class="library-close__profile" id="library-close__profile">
+            </div>
+        </div>
+        <div class="user-content">
+            <div>
+                <form class="library-form" id="library-form" action="">
+                    <p class="about-user__card">Bank card number</p>
+                    <label>
+                        <input type="number" class="user-bank_card__info" required maxlength="16">
+                    </label>
+                    <p class="about-user__card">Expiration code</p>
+                    <label class="user-bank_card__label">
+                        <input type="number" required maxlength="2">
+                    </label>
+                    <label class="user-bank_card__label user-bank_card__label_2">
+                        <input type="number" required maxlength="2">
+                    </label>
+                    <p class="about-user__card">CVC</p>
+                    <label>
+                        <input type="number" class="cvs-number" required maxlength="3">
+                    </label>
+                    <p class="about-user__card">Cardholder name</p>
+                    <label>
+                        <input type="text" class="user-bank_card__info">
+                    </label>
+                    <p class="about-user__card">Postal code</p>
+                    <label>
+                        <input type="number" class="user-bank_card__info" required>
+                    </label>
+                    <p class="about-user__card">City / Town</p>
+                    <label>
+                        <input type="number" class="user-bank_card__info" required>
+                    </label>
+                    <div class="buy-by__card">
+                        <div class="buy-button">
+                            <button type="submit">Buy</button>
+                        </div>
+                        <div>
+                            <p class="price">$ 25.00</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="library-card__text">
+                <p>If you are live, work, attend school, or pay property taxes in New York State, you
+                    can get a $25 digital
+                    library card right now using this online form. Visitors to New York State can also
+                    use this form to
+                    apply for a temporary card.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--my profile-->
+<div class="my-profile__window" id="user-profile">
+    <div class="profile-body">
+        <div class="my-profile">
+            <div class="avatar-profile">
+                <div class="avatar-icon">
+                </div>
+                <div class="avatar-info">
+                </div>
+            </div>
+            <div class="my-card">
+                <div>
+                    <div class="profile-info">
+                        <div>
+                            <p class="my-profile__title">My profile</p>
+                        </div>
+                        <div>
+                            <img src="./logo/close.svg" alt="close" class="close-profile" id="close-profile">
+                        </div>
+                    </div>
+                </div>
+                <div class="user-status">
+                    <p class="visits">visits</p>
+                    <p class="bonuses">bonuses</p>
+                    <p class="books">Books</p>
+                </div>
+                <div class="my-profile__icon">
+                    <img src="my_profile/Union.svg" alt="union" class="users-icons">
+                    <img src="my_profile/Star.svg" alt="star" class="users-icons">
+                    <img src="my_profile/book.svg" alt="book" class="users-icons__book">
+                </div>
+                <div class="my-profile__number">
+                    <p id="userLoginCount"></p>
+                    <p>1240</p>
+                    <p class="book-number">2</p>
+                </div>
+                <p class="my-profile__rented">Rented books</p>
+                <ul class="my-profile__list">
+                    <li class="my-profile__item">The Last Queen, Clive Irving</li>
+                    <li class="my-profile__item">Dominicana, Angie Cruz</li>
+                </ul>
+                <div class="my-profile__card">
+                    <p class="my-profile__card-number">Card number</p>
+                    <p class="my-profile__numbers"></p>
+                    <img src="./my_profile/icon_copy.svg" alt="icon_copy" class="icon_copy" id="icon_copy">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="index.js"></script>
+<script src="slider.js"></script>
+<script src="burgerMenu.js"></script>
+
+</body>
+</html>
