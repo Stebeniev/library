@@ -1,0 +1,461 @@
+@media (max-width: 1440px) {
+    .register-window {
+        width: 100%;
+        height: 520%;
+        left: 0;
+    }
+    .login-window {
+        width: 100%;
+        height: 520%;
+        left: 0;
+    }
+    .my-profile__window {
+        left: -8px;
+        width: 100%;
+        height: 600%;
+    }
+    .profile-body {
+        margin-left: 420px;
+        margin-right: 420px;
+        margin-top: 312px;
+    }
+    .library-card__wrapper {
+        height: 395.5%;
+        width: 100%;
+        /*left: -110px;*/
+
+    }
+}
+@media (max-width: 1024px) {
+    .header {
+        position: relative;
+    }
+
+    .menu__b {
+        position: absolute;
+        right: -342px;
+        top: 0;
+        padding: 80px 0 30px 0;
+        width: 342px;
+        height: 570px;
+        background-color: black;
+        text-align: center;
+        visibility: hidden;
+        transition: transform .5s, visibility .5s;
+    }
+
+    .menu__list {
+        display: block;
+    }
+
+    .menu__link {
+        display: block;
+        padding-bottom: 30px;
+        padding-right: 20px;
+    }
+
+    .menu__item:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .menu__list {
+        padding-left: 0;
+    }
+
+    .logo {
+        position: relative;
+        left: 210px;
+    }
+
+    .header__burger-btn {
+        display: block;
+        position: relative;
+        top: 22px;
+        left: 670px;
+    }
+
+    .header.open .menu__b {
+        transform: translateX(-100%);
+        visibility: visible;
+    }
+
+    .main-section {
+        margin-top: 220px;
+        z-index: 0;
+        width: 600px;
+        height: 220px;
+        padding: 35px 38px;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+    }
+
+    .find__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+    }
+    /*.find__card-active {*/
+    /*    display: flex;*/
+    /*    flex-direction: column;*/
+    /*    align-items: center;*/
+    /*    gap: 22px;*/
+    /*}*/
+
+    .our-contacts__content {
+        flex-direction: column;
+        margin-right: 0;
+        margin-left: 0;
+        align-items: center;
+        gap: 83px;
+    }
+
+    .get-card h3 {
+        text-align: center;
+        margin-left: 15px;
+    }
+
+    .get-card {
+        width: 550px;
+    }
+
+    .get-card__paragraph p {
+        text-align: center;
+        width: 600px;
+        padding-right: 30px;
+        padding-top: 5px;
+    }
+
+    .action {
+        margin-left: 180px;
+    }
+    .popup__login {
+        left: 1215px;
+        z-index: 5;
+    }
+    .register-window {
+        width: 140%;
+        height: 740%;
+        left: 0;
+    }
+    .login-window {
+        width: 140%;
+        height: 740%;
+        left: 0;
+    }
+    .my-profile__window {
+        left: 0;
+        width: 140%;
+        height: 600%;
+    }
+    .library-card__wrapper {
+        height: 495%;
+        width: 140%;
+        left: 0;
+
+    }
+}
+
+@media (max-width: 768px) {
+    html{
+        /*overflow-x: hidden;*/
+    }
+
+    .header {
+        width: 764px;
+        /*position: relative;*/
+    }
+
+    body {
+        max-width: 768px;
+        margin: 0 auto;
+        /*height: 7824px;*/
+    }
+    .body-wrapper {
+        /*overflow-x: clip;*/
+        /*position: relative;*/
+        max-width: 768px;
+        /*height: 7824px;*/
+    }
+
+    .container {
+        width: 768px;
+    }
+
+    .header__burger-btn {
+        position: relative;
+        top: 21px;
+        left: 260px;
+        width: 40px;
+        height: 40px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
+        z-index: 5;
+    }
+
+    .menu__b {
+        flex-direction: column;
+        margin-right: 0;
+        margin-left: 0;
+        z-index: 3;
+    }
+
+    .logo {
+        position: relative;
+        left: 30px;
+        margin-left: 0;
+        z-index: 4;
+    }
+
+    .about {
+        margin-left: -3px;
+    }
+
+    .main {
+        margin-right: 5px;
+        width: 764px;
+        height: 600px;
+        display: flex;
+        background-image: url("image/Welcome_1.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 0;
+    }
+
+    .main-section {
+        z-index: 1;
+        margin-left: -5px;
+    }
+
+    #dot-visible {
+        display: block;
+    }
+
+    #dot-visible1 {
+        display: block;
+    }
+
+    .slider-container {
+        max-width: 450px;
+        margin-bottom: 10px;
+    }
+
+    .slider {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        z-index: 1;
+        width: 475px;
+        left: 140px;
+        overflow: hidden;
+        margin: 15px 20px 20px 20px;
+    }
+    .slider__wrapper {
+        margin-top: -20px;
+    }
+    .slider__btn-prev {
+        margin-top: -40px;
+        display: block;
+        position: relative;
+        z-index: 10;
+        left: 98px;
+        top: 325px;
+    }
+    .slider__btn-next {
+        display: block;
+        position: relative;
+        z-index: 10;
+        left: 660px;
+        top: -295px;
+    }
+
+    .content-title {
+        margin-top: -5px;
+    }
+
+    .radiobutton label {
+        margin-right: 50px;
+    }
+
+    .radiobutton  {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .favorites {
+        max-width: 768px;
+        max-height: 2629px;
+        position: relative;
+    }
+    .input-wrapper {
+        position: sticky;
+        top: 10px;
+        z-index: 300;
+    }
+    .choice__winter,
+    .choice__spring,
+    .choice__summer,
+    .choice__autumn {
+        width: 590px;
+        min-height: 2340px;
+    }
+    .content-wrapper {
+        margin-left: 70px;
+        margin-top: 5px;
+    }
+
+    .content-title__shop {
+        margin-top: 60px;
+        margin-left: -4px;
+    }
+
+    .table h3 {
+        padding-left: 20px;
+    }
+
+    .range {
+        padding-left: 20px;
+    }
+
+    .table-2 h3 {
+        margin-right: 0;
+        padding-right: 27px;
+    }
+
+    .second-table {
+        margin-right: 18px;
+    }
+
+    .paragraph-about {
+        width: 748px;
+        margin-left: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .book-button__buy {
+        margin-left: 20px;
+        margin-bottom: 15px;
+    }
+
+    .line__2 {
+        margin-left: -3px;
+        width: 135px;
+        height: 1px;
+    }
+
+    .our-contacts__content {
+        align-items: flex-start;
+        margin-left: 15px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .our-contacts__map {
+        width: 696px;
+        height: 414px;
+        margin-left: 15px;
+    }
+
+    .choice__button {
+        margin-top: 50px;
+    }
+
+    .action {
+        margin-top: 7px;
+    }
+
+    .find__card{
+        margin-right: 20px;
+    }
+    .find__card-active{
+        margin-left: 60px;
+    }
+
+    .library-wrapper {
+        margin-top: 15px;
+    }
+
+    .footer {
+        margin-top: -3px;
+        margin-left: -3px;
+        width: 766px;
+    }
+
+    .footer-link {
+        margin-top: 35px;
+    }
+
+    .popup__login {
+        left: 578px;
+    }
+    .popup__body {
+        z-index: 4;
+    }
+    .active-icon {
+        position: absolute;
+        margin-top: 30px;
+        left: 630px;
+        z-index: 10;
+        cursor: pointer;
+    }
+    .popup__active {
+        top: 2px;
+        left: 560px;
+        z-index: 10;
+    }
+
+    .register-window {
+        z-index: 5;
+    }
+
+    .login-window {
+        z-index: 5;
+    }
+    .register__body {
+        margin-left: 259px;
+        margin-right: 259px;
+        top: 321px;
+    }
+    .login__body {
+        margin-left: 259px;
+        margin-right: 259px;
+        top: 375px;
+    }
+    .profile-body {
+        margin-left: 84px;
+        margin-right: 85px;
+    }
+    .register-window {
+        width: 100%;
+        height: 1292%;
+        left: 0;
+    }
+    .login-window {
+        width: 100%;
+        height: 1292%;
+        left: 0;
+    }
+    .my-profile__window {
+        left: -3px;
+        width: 100%;
+        height: 600%;
+    }
+    .library-card__wrapper {
+        height: 673%;
+        width: 100%;
+        left: -2px;
+
+    }
+}
+
+
+
